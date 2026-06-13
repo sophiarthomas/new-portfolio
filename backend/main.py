@@ -1,7 +1,16 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from router import project_router, experience_router, company_router, bullet_router, education_router
 
 app = FastAPI()
+
+# Cors
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Vite's default port
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 # "Plug in" the routes from data_model.py
 app.include_router(project_router)
