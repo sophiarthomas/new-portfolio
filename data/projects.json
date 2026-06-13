@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title": "Automated Digital Certificate Renewal",
+        "description": "A python script that parses logs and generates new digital certs and installs them onto servers",
+        "tech_stack": ["Python", "Linux", "Bash"],
+        "github_url": "https://github.com/sophiarthomas"
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "school": "California State University Long Beach",
+        "gpa": 3.8,
+        "degree": "B.S",
+        "major": "Computer Science",
+        "relevant_coursework": [
+            "Data Structures",
+            "Algorithms"
+        ]
+    }
+]
