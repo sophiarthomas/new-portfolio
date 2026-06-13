@@ -22,14 +22,14 @@ Industry standard for building production APIs. Add new feature -- like an endpo
 ### Automated Deployment (CI/CD Pipeline)
 
 1. Push repo to git
-   ````
+   ```
    git init
    git add .
    git commit -m "Initial commit"
    git branch -M main
    git remote add origin <PASTE_YOUR_COPIED_URL>
-   git push -u origin main```
-   ````
+   git push -u origin main
+   ```
 2. create workflow file: this file
 3. configure the pipeline: write a workflow that triggers on git push origin main:
    - build: builds a new docker image containign your updated backend code and your updated projects.json file
