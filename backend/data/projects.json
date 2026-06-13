@@ -1,9 +1,24 @@
 [
+     {
+        "id": 0,
+        "title": "",
+        "description": "",
+        "tech_stack": [""],
+        "github_url": "https://github.com/sophiarthomas"
+    },
     {
         "id": 1,
         "title": "Automated Digital Certificate Renewal",
         "description": "A python script that parses logs and generates new digital certs and installs them onto servers",
         "tech_stack": ["Python", "Linux", "Bash"],
         "github_url": "https://github.com/sophiarthomas"
+    },
+     {
+        "id": 2,
+        "title": "Personal Portfolio",
+        "description": "Python FastAPI backend, Read Vite frontend, using docker to containerize, github workflows for a CI/CD pipeline",
+        "tech_stack": ["FastAPI", "React", "Docker", "Github Workflow", "Pydantic"],
+        "github_url": "https://github.com/sophiarthomas/new-portfolio"
     }
+
 ]

@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Projects from "./Project.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +19,7 @@ function App() {
         </div>
         <div>
           <h1>Get started</h1>
-          <script></script>
+          <Projects />
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
