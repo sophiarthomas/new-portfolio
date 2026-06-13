@@ -32,5 +32,6 @@ jobs:
                   docker push ${{ secrets.DOCKER_USERNAME }}/new-portfolio:latest
 
             # deploy: it uses an ssh action to connect to your remote linux server, stop the old container, pull the fresh image, and spin up a new version
+            # need: server
             - name: Deploy to Server
               run: echo "Deploying to Server..."
