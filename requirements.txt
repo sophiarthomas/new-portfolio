@@ -13,8 +13,6 @@ lazy-object-proxy==1.12.0
 MarkupSafe==3.0.3
 msgpack==1.2.0
 nest-asyncio==1.6.0
-pop-config==12.0.4
-pop-loop==1.1.0
 pydantic==2.13.4
 pydantic_core==2.46.4
 PyYAML==6.0.3

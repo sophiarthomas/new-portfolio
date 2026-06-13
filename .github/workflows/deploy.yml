@@ -20,9 +20,6 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Freeze Dependencies
-              run: pip freeze > requirements.txt
-
             # build: builds a new docker image containign your updated backend code and your updated projects.json file
             - name: Build Docker Image
               run: docker build -t new-portfolio .
