@@ -2,6 +2,20 @@
 
 ## Commands
 
+Run Frontend
+
+```
+npm run dev
+```
+
+Run Backend
+
+```
+uvicorn main:app --reload?
+```
+
+Docker Build Image & Run Container
+
 ```
 docker build -t new-portfolio .
 docker run -p 8000:8000 new-portfolio
