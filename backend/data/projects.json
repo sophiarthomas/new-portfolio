@@ -1,24 +1,35 @@
 [
-     {
-        "id": 0,
-        "title": "",
-        "description": "",
-        "tech_stack": [""],
-        "github_url": "https://github.com/sophiarthomas"
-    },
     {
         "id": 1,
         "title": "Automated Digital Certificate Renewal",
         "description": "A python script that parses logs and generates new digital certs and installs them onto servers",
         "tech_stack": ["Python", "Linux", "Bash"],
-        "github_url": "https://github.com/sophiarthomas"
+        "github_url": "",
+        "visible": true
     },
-     {
+     
+    {
         "id": 2,
         "title": "Personal Portfolio",
-        "description": "Python FastAPI backend, Read Vite frontend, using docker to containerize, github workflows for a CI/CD pipeline",
-        "tech_stack": ["FastAPI", "React", "Docker", "Github Workflow", "Pydantic"],
-        "github_url": "https://github.com/sophiarthomas/new-portfolio"
+        "description": "A full-stack personal portfolio built with React and FastAPI, containerized with Docker and deployed through automated GitHub Actions workflows. Emphasizes production-ready development practices from local environment to deployment.",
+        "tech_stack": ["React", "FastAPI", "Docker", "GitHub Actions"],
+        "github_url": "https://github.com/sophiarthomas/new-portfolio",
+        "visible": true
+    },
+    {
+        "id": 3,
+        "title": "EXPLORE",
+        "description": "A location-sharing mobile app built with React Native and Firebase, featuring real-time data, Google Maps integration, and a gamified leaderboard system.",
+        "tech_stack": ["React Native", "Expo", "Firebase", "Google Maps API"],
+        "github_url": "https://github.com/sophiarthomas/EXPLORE",
+        "visible": true
+    },
+    {
+        "id": 4,
+        "title": "Fibonacci Solitaire",
+        "description": "A card game engine built in C++ that implements a Fibonacci-based solitaire ruleset. Demonstrates core CS fundamentals including OOP, data structures, and build automation via Makefile.",
+        "tech_stack": ["C++", "OOP", "Makefile"],
+        "github_url": "https://github.com/sophiarthomas/FibonacciSolitaire",
+        "visible": true
     }
-
 ]
