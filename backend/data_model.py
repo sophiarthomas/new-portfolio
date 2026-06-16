@@ -32,6 +32,9 @@ class Project(BaseModel):
     description: str
     tech_stack: List[str]
     github_url: str
+    visible: bool
+    # dates: 
+    # img/video: 
 
 class Company(BaseModel):
     id: str
