@@ -71,7 +71,7 @@ class EmploymentType(str, Enum):
 
 class Experience(BaseModel):
     id: int
-    company_id: str                         # FK → Company
+    company: Company                       # FK → Company
     title: str                              # "Senior Frontend Engineer"
     type: EmploymentType
     # dates: DateRange

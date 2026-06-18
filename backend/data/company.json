@@ -1,0 +1,18 @@
+[
+  {
+    "id": "walt_disney_animation_studios",
+    "name": "Walt Disney Animation Studios",
+    "url": "https://www.disneyanimation.com",
+    "logo_slug": "walt_disney_animation_studios",
+    "location": "Burbank, CA",
+    "industry": "Entertainment"
+  },
+  {
+    "id": "csulb_university_housing",
+    "name": "CSULB University Housing and Residential Life",
+    "url": "https://www.csulb.edu/housing",
+    "logo_slug": "csulb_university_housing",
+    "location": "Long Beach, CA",
+    "industry": "Higher Education"
+  }
+]

@@ -1,0 +1,94 @@
+[
+   {
+    "id": 4,
+    "company": {
+      "id": "walt_disney_animation_studios",
+      "name": "Walt Disney Animation Studios",
+      "url": "https://www.disneyanimation.com",
+      "logo_slug": "walt_disney_animation_studios",
+      "location": "Burbank, CA",
+      "industry": "Entertainment"
+    },
+    "title": "Technical Support Engineer",
+    "type": "contract",
+    "skill_ids": ["technical_support", "linux", "macos", "networking", "hardware", "jira"],
+    "bullets": [
+     
+    ]
+  },
+  {
+    "id": 1,
+    "company": {
+      "id": "walt_disney_animation_studios",
+      "name": "Walt Disney Animation Studios",
+      "url": "https://www.disneyanimation.com",
+      "logo_slug": "walt_disney_animation_studios",
+      "location": "Burbank, CA",
+      "industry": "Entertainment"
+    },
+    "title": "Platform Engineer",
+    "type": "internship",
+    "skill_ids": ["python", "ssl", "networking", "automation", "monitoring", "documentation"],
+    "bullets": [
+      {
+        "text": "Automated network certificate processes to meet corporate security mandates and protect internal traffic across the WDAS environment with minimal production impact."
+      },
+      {
+        "text": "Debugged automation scripts, validated SSL configurations, and implemented proactive monitoring to cut certificate-related incidents by 90% and reduce troubleshooting time from hours to minutes."
+      },
+      {
+        "text": "Created documentation and roadmaps to guide future certificate integration and infrastructure scaling."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "company": {
+      "id": "csulb_university_housing",
+      "name": "CSULB University Housing and Residential Life",
+      "url": "https://www.csulb.edu/housing",
+      "logo_slug": "csulb_university_housing",
+      "location": "Long Beach, CA",
+      "industry": "Higher Education"
+    },
+    "title": "Technology Administrator",
+    "type": "part-time",
+    "skill_ids": ["networking", "technical_support", "netbox", "policy_enforcement"],
+    "bullets": [
+      {
+        "text": "Provide first-line technical support for network access, cable systems, and policy enforcement for 3,000+ residents."
+      },
+      {
+        "text": "Assess and troubleshoot computer problems brought by students, faculty and staff."
+      },
+      {
+        "text": "Assist with door access maintenance through Netbox (IRM) and manage front desk technology-related support."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "company": {
+      "id": "walt_disney_animation_studios",
+      "name": "Walt Disney Animation Studios",
+      "url": "https://www.disneyanimation.com",
+      "logo_slug": "walt_disney_animation_studios",
+      "location": "Burbank, CA",
+      "industry": "Entertainment"
+    },
+    "title": "Technical Support Engineer",
+    "type": "internship",
+    "skill_ids": ["technical_support", "linux", "macos", "networking", "hardware", "jira"],
+    "bullets": [
+      {
+        "text": "Provided technical support (via phone and deskside) and solutions for hardware and software issues experienced by artists and engineers during the production of Moana 2."
+      },
+      {
+        "text": "Scope of support included troubleshooting hardware, networking, and software issues in a Linux and MacOS environment."
+      },
+      {
+        "text": "Resolved over 125 Jira tickets to ensure minimal downtime and efficient resolution of technical issues."
+      }
+    ]
+  }
+]
