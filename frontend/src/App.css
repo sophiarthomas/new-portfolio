@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -63,6 +64,7 @@
   place-content: center;
   place-items: center;
   flex-grow: 1;
+  scroll-behavior: smooth;
 
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
@@ -70,7 +72,14 @@
   }
 }
 
-#next-steps {
+#home {
+  place-items: center; 
+  font-style: italic; 
+  font-weight: 700; 
+
+}
+
+#contact {
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
@@ -104,7 +113,7 @@
   }
 }
 
-#next-steps ul {
+#contact ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -186,4 +195,121 @@
 .profile {
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* MENU BAR */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.ribbit-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 18px 0 0 20px;
+  gap: 0;
+}
+
+/* Logo / toggle — no box, no background */
+.ribbit-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.ribbit-logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.35);
+  text-transform: lowercase;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 16px;
+}
+.hamburger span {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: rgba(255,255,255,0.4);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* Thin divider between logo and links */
+.ribbit-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255,255,255,0.15);
+  margin: 0 14px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.05s;
+}
+.ribbit-divider.visible {
+  opacity: 1;
+}
+
+/* Horizontal slide container */
+.ribbit-menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  transition: width 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.22s ease;
+  white-space: nowrap;
+}
+.ribbit-menu.open {
+  opacity: 1;
+}
+
+.ribbit-menu a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 14px;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+.ribbit-menu a:first-child {
+  padding-left: 0;
+}
+.ribbit-menu a:hover {
+  color: rgba(255,255,255,0.85);
+}
+.ribbit-menu a.active {
+  color: #ffffff;
+  font-weight: 600;
 }
