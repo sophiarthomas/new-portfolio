@@ -1,3 +1,4 @@
+# SYNTAX
 # on: Defines the triggers for the workflow. In the example above, it triggers on every push to the main branch.
 # jobs: A workflow is made up of one or more jobs that run in parallel or sequentially.
 # steps: Individual tasks that run sequentially within a job, such as installing dependencies or running tests.
@@ -5,33 +6,35 @@
 # run: Executes individual terminal commands on the server.
 
 name: Deploy Application
-# triggers on: git push origin main
+# triggers on: git push
+# This file breaks down deploy steps to run on an ubuntu git runner (separte server owned by github) builds a docker
+# image based on the Dockerfile located at the root of this directory and pushes the new image to dockerhub.
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 jobs:
-    deploy-app:
-        runs-on:
-            ubuntu-latest
-            # windows-latest
-            # macos-latest
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
+  deploy-app:
+    runs-on:
+      ubuntu-latest
+      # windows-latest
+      # macos-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-            # build: builds a new docker image containign your updated backend code and your updated projects.json file
-            - name: Build Docker Image
-              run: docker build -t new-portfolio .
+      # build: builds a new docker image containing your updated backend code and your updated projects.json file
+      - name: Build Docker Image
+        run: docker build -t new-portfolio .
 
-            # push: it pushes that image to a registry like docker hub or gihub pages
-            - name: Push Image to Docker Hub
-              run: |
-                  echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-                  docker tag new-portfolio ${{ secrets.DOCKER_USERNAME }}/new-portfolio:latest
-                  docker push ${{ secrets.DOCKER_USERNAME }}/new-portfolio:latest
+      # push: it pushes that image to a registry like docker hub or gihub pages
+      - name: Push Image to Docker Hub
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          docker tag new-portfolio ${{ secrets.DOCKER_USERNAME }}/new-portfolio:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/new-portfolio:latest
 
-            # deploy: it uses an ssh action to connect to your remote linux server, stop the old container, pull the fresh image, and spin up a new version
-            # need: server
-            - name: Deploy to Server
-              run: echo "Deploying to Server..."
+      # deploy: it uses an ssh action to connect to your remote linux server, stop the old container, pull the fresh image, and spin up a new version
+      # need: server
+      - name: Deploy to Server
+        run: echo "Deploying to Server..."
