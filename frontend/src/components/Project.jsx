@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
+import { fetchProjects } from "../services/api";
 
-const API_URL = import.meta.env.VITE_API_URL ?? "http://127.0.0.1:8000";
-console.log(API_URL)
 
 function ProjectCard({ title, description, tech_stack, github_url }) {
   return (
@@ -28,26 +27,18 @@ export default function Projects() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const controller = new AbortController();
-
-    async function fetchProjects() {
+    const loadData = async () => {
       try {
-        const res = await fetch(`${API_URL}/api/projects`, {
-          signal: controller.signal,
-        });
-        if (!res.ok) throw new Error(`Server error: ${res.status}`);
-        const data = await res.json();
-        setProjects(data);
+        const data = await fetchProjects(); 
+        setProjects(data); 
       } catch (err) {
-        if (err.name !== "AbortError") setError(err.message);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
-    }
-
-    fetchProjects();
-    return () => controller.abort(); // cleanup on unmount
-  }, []);
+    };
+    loadData(); 
+  }, []); // Empty dependency means it runs once on mount 
 
   if (loading) return <p style={styles.status}>Loading projects…</p>;
   if (error)   return <p style={styles.status}>Error: {error}</p>;

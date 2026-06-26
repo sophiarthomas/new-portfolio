@@ -38,3 +38,10 @@ jobs:
       # need: server
       - name: Deploy to Server
         run: echo "Deploying to Server..."
+
+# React backend docker run
+# docker run -d \
+#   --name backend \
+#   --network react-backend-net \
+#   -p 4000:4000 \
+#   backend-api

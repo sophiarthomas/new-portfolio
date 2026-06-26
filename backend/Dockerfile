@@ -1,5 +1,6 @@
 FROM python:3.11-slim
-WORKDIR /new-portfolio/backend
+RUN mkdir -p /backend 
+WORKDIR /backend
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt

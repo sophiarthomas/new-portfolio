@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { fetchExperience } from "../services/api"
 import { 
-  TYPE_META, 
-  API_URL 
+  TYPE_META,  
 } from "../constants";
  
 function Badge({ type }) {
@@ -185,27 +185,19 @@ export default function Experience() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-    const controller = new AbortController();
-
-    async function fetchExperience() {
-        try {
-        const res = await fetch(`${API_URL}/api/experience`, {
-            signal: controller.signal,
-        });
-        if (!res.ok) throw new Error(`Server error: ${res.status}`);
-        const data = await res.json();
-        setExperience(data);
-        } catch (err) {
-        if (err.name !== "AbortError") setError(err.message);
-        } finally {
-        setLoading(false);
-        }
-    }
-
-    fetchExperience();
-    return () => controller.abort(); // cleanup on unmount
-    }, []);
+      useEffect(() => {
+        const loadData = async () => {
+          try {
+            const data = await fetchExperience(); 
+            setExperience(data); 
+          } catch (err) {
+            setError(err.message);
+          } finally {
+            setLoading(false);
+          }
+        };
+        loadData(); 
+      }, []); // Empty dependency means it runs once on mount 
 
     if (loading) return <p style={styles.status}>Loading experience…</p>;
     if (error)   return <p style={styles.status}>Error: {error}</p>;
